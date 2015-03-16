@@ -354,9 +354,10 @@ a {
   box-shadow: inset 0 0 15px #333; }
   .b-landing h1 {
     color: rgba(255, 255, 255, 0.9);
-    line-height: 1.65; }
+    line-height: 1.35;
+    position: relative;
+    z-index: 2; }
     .b-landing h1 span {
-      background-color: rgba(150, 0, 0, 0.8);
       padding: 0 10px;
       line-height: .8; }
   .b-landing .b-backgrounds {
@@ -364,6 +365,15 @@ a {
     height: 100%;
     width: 100%;
     top: 0; }
+    .b-landing .b-backgrounds:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      content: "";
+      z-index: 1; }
     .b-landing .b-backgrounds .e-bg {
       position: absolute;
       width: 100%;

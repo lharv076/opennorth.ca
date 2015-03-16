@@ -7,32 +7,46 @@
 
 	h1 {
 		color: $white;
-		line-height: 1.65;
+		line-height: 1.35;
+		position: relative;
+		z-index: 2;
+
 
 		span {
-			background-color: $primary-color-dark-1_80;
+			// background-color: $primary-color-dark-1_80;
 			padding: 0 10px;
 			line-height: .8;
 		}
 	}
 
 	.b-backgrounds {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
 
-	    .e-bg {
-	    	position: absolute;
-	    	width: 100%;
-	    	height: 100%;
-	        opacity: 0;
+    &:before {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	bottom: 0;
+    	right: 0;
+    	background-color: rgba(0,0,0,0.6);
+    	content: "";
+    	z-index: 1;
+    }
+
+    .e-bg {
+    	position: absolute;
+    	width: 100%;
+    	height: 100%;
+      opacity: 0;
 			background-size: cover;
-	        -o-transition: opacity 4s ease;
-	        -ms-transition: opacity 4s ease;
-	        -moz-transition: opacity 4s ease;
-	        transition: opacity 4s ease;
-	    }
+      -o-transition: opacity 4s ease;
+      -ms-transition: opacity 4s ease;
+      -moz-transition: opacity 4s ease;
+      transition: opacity 4s ease;
+    }
 
 		.m-img1 {
 			background-image: url(../img/main-slider/office-01.jpg);
